@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FlipperCreator</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav style="list-style: none; position: absolute; top: 20px; right: 20px;">
+    <li><a href="/index.html"><img style="width: 2em;" src="assets/images/home-menu-ui-svgrepo-com.svg" alt=""></a></li>
+  </nav>
+  <div style="display: flex; flex-direction: column; align-content: center; align-items: center;">
+    <div class="input-container">
+      <input type="text" id="myInput" placeholder="Naam..." />
+
+    </div>
+    <div class="switch-container" id="switchContainer">
+      <!-- Switches will be inserted here dynamically -->
+    </div>
+
+    <div class="result">
+      Resultaat: <span id="result">00 00 00 00 00 00 01 11 11 33 33 11 11 33 33 11 11</span>
+    </div>
+
+    <button class="download-btn" onclick="downloadSubFile()">Download</button>
+  </div>
+  <script  src="assets/script.js"></script>
+</body>
+</html>

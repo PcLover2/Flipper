@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'monogram';
+  src: url("fonts/monogram-extended.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "monogram", monospace;
+  font-size: 32px;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.switch-container {
+  font-family: "monogram", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px
+}
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Adjust the width for a rectangular shape */
+  height: 20px; /* Height remains smaller for the rectangular look */
+  margin-bottom: 10px;
+  transform: rotate(-90deg); /* Rotating the switch */
+  border-radius: 0px; /* Small border-radius for slightly rounded corners */
+  border: #000 solid 2px;
+}
+.toggle-switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc;
+  transition: 0.4s;
+  border-radius: 0px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* The ball inside is a perfect square */
+  width: 16px;  /* Same height and width */
+  left: 2px;    /* Positioned 2px from the left */
+  bottom: 2px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 0px; /* Small border-radius for slightly rounded corners */
+}
+input:checked + .slider {
+  background-color: #ea781b;
+}
+input:checked + .slider:before {
+  transform: translateX(20px); /* Move the square ball to the right */
+}
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.upload-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: #000 solid 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: "monogram", monospace;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.upload-btn:hover {
+  background-color: #ea781b;
+}

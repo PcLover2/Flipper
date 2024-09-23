@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FlipperExtractor</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav style="list-style: none; position: absolute; top: 20px; right: 20px;">
+    <li><a href="/index.html"><img style="width: 2em;" src="assets/images/home-menu-ui-svgrepo-com.svg" alt=""></a></li>
+  </nav>
+  <div style="display: flex; flex-direction: column; align-content: center; align-items: center;">
+    <pre id="output" style="    font-size: 2em;
+    font-family: inherit;
+    margin: 15px;"></pre>
+    <div class="switch-container" id="switchContainer">
+      <!-- Switches will be inserted here dynamically -->
+    </div>
+    <!-- Hidden file input -->
+    <input type="file" id="fileInput" accept=".sub" style="display:none" onchange="handleFileUpload()">
+    
+    <!-- Upload button -->
+    <button class="upload-btn" id="uploadBtn" onclick="uploadSubFile()">Upload</button>
+  </div>
+  <script  src="assets/script.js"></script>
+</body>
+</html>
